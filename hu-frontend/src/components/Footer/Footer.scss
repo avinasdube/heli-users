@@ -1,0 +1,21 @@
+$primary : #C3C7F3;
+$secondary : #edefff;
+$font : #161616;
+
+.footerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: $font;
+    background-color: $secondary;
+
+    .left{
+            font-size: 18px;
+            font-weight: 600;
+    }
+
+    .right{
+        font-size: 14px;
+    }
+}

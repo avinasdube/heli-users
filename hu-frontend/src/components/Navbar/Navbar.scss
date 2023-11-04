@@ -1,0 +1,41 @@
+$primary : #C3C7F3;
+$secondary : #edefff;
+$font : #161616;
+
+.navbarContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: $font;
+
+    .left{
+        .logo{
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+
+    .right{
+        .createTeamLogo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+            border-radius: 10px;
+            background-color: $primary;
+            cursor: pointer;
+            transition: linear 0.2s;
+
+            img{
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        .createTeamLogo:hover{
+            transform: scale(1.04);
+            background-color: $primary;
+        }
+    }
+}

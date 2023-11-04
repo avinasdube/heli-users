@@ -1,0 +1,120 @@
+$primary : #C3C7F3;
+$secondary : #edefff;
+$font : #161616;
+$bordercolor: #a2a7f3;
+
+.userslistContainer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .actionBar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $secondary;
+        padding: 10px 14px;
+        border-radius: 8px;
+
+        .searchBar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            span {
+                font-size: 24px;
+                font-weight: 700;
+            }
+
+            input {
+                height: 20px;
+                outline: none;
+                border: none;
+                background-color: white;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                padding: 5px 15px;
+                border-radius: 10px;
+                border: 2px solid transparent;
+                transition: linear 0.2s;
+
+                &::placeholder {
+                    color: gray;
+                }
+            }
+
+            input:focus {
+                border: 2px solid $primary;
+            }
+
+            .filterBar {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+                .filtersIcon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $primary;
+                    padding: 4px;
+                    border: 2px solid transparent;
+                    border-radius: 8px;
+                    cursor: pointer;
+
+                    img {
+
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                .filtersIcon.active {
+                    border: 2px solid $bordercolor;
+                }
+
+                .filterList {
+                    visibility: hidden;
+                    position: absolute;
+                    top: 50px;
+                    padding: 10px;
+                    background-color: $secondary;
+                    border-radius: 8px;
+                    box-shadow: 0px 0px 10px rgb(190, 190, 190);
+                    z-index: +4;
+                }
+
+                .filterList.active {
+                    visibility: visible;
+                }
+            }
+        }
+
+        .createTeamLogo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+            border-radius: 10px;
+            background-color: $primary;
+            cursor: pointer;
+            transition: linear 0.2s;
+
+            img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        .createTeamLogo:hover {
+            transform: scale(1.04);
+        }
+
+
+    }
+
+    .usersList {
+        height: 100%;
+    }
+}
